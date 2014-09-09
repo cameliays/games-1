@@ -4,60 +4,88 @@
 			ShootChop
 		</title>
 		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
-		<script type="application/javascript">
-			window.onload = function(){
-				var mover = new movecloud(); 
-				mover.cloudmover(30,'movecloud');
-				mover.cloudmover(50,'movecloud1');
-				mover.cloudmover(80,'movecloud2');						
-			}
-
-			function movecloud(){
-				
-			}
-
-			movecloud.prototype.cloudmover = function(speed,classname){
-				var clouds = document.getElementsByClassName(classname);
-				for(i in clouds){
-					if(!isNaN(i)){
-						this.moveit(clouds[i],speed)
-					}
-				}	
-			}
-			
-			movecloud.prototype.moveit = function(ele,speed){
-				var inc = 0;
-				setInterval(function(){
-					ele.style.left = inc+"px";
-					inc++;
-				},speed); 
-			}
-		</script>
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<script type="application/javascript" src="js/movecloud.js"></script>
 	
 	</head>
 	<body>
-		<div class="clouds movecloud">
-			<div class="cloud-wrapper">
-				<div class="c1"></div>
-				<div class="c2"></div>
-				<div class="c3"></div>
-			</div>		
+		<div class="clouds-container">		
+			<div class="clouds rare">
+				<div class="cloud-wrapper-rare">
+					<div class="c1 clouds-background2"></div>
+					<div class="c2 clouds-background2"></div>
+					<div class="c3 clouds-background2"></div>
+				</div>		
+			</div>
+			<div class="clouds rare" style="left:550px;">
+				<div class="cloud-wrapper-rare">
+					<div class="c1 clouds-background2"></div>
+					<div class="c2 clouds-background2"></div>
+					<div class="c3 clouds-background2"></div>
+				</div>		
+			</div>
+			<div class="clouds rare" style="left:711px;top:200px">
+				<div class="cloud-wrapper-rare">
+					<div class="c1 clouds-background2"></div>
+					<div class="c2 clouds-background2"></div>
+					<div class="c3 clouds-background2"></div>
+				</div>		
+			</div>
+			<div class="clouds rare" style="left:1078px;top:120px">
+				<div class="cloud-wrapper-rare">
+					<div class="c1 clouds-background2"></div>
+					<div class="c2 clouds-background2"></div>
+					<div class="c3 clouds-background2"></div>
+				</div>		
+			</div>
+			<div class="clouds middle" style="left:135px;top:55px">
+				<div class="cloud-wrapper-middle">
+					<div class="c1 clouds-background1"></div>
+					<div class="c2 clouds-background1"></div>
+					<div class="c3 clouds-background1"></div>
+				</div>		
+			</div>
+			<div class="clouds middle" style="left:475px;top:119px">
+				<div class="cloud-wrapper-middle">
+					<div class="c1 clouds-background1"></div>
+					<div class="c2 clouds-background1"></div>
+					<div class="c3 clouds-background1"></div>
+				</div>		
+			</div>
+			<div class="clouds middle" style="left:924px;top:20px">
+				<div class="cloud-wrapper-middle">
+					<div class="c1 clouds-background1"></div>
+					<div class="c2 clouds-background1"></div>
+					<div class="c3 clouds-background1"></div>
+				</div>		
+			</div>
+			<div class="clouds front" style="left:-64px;top:183px">
+				<div class="cloud-wrapper-front">
+					<div class="c1 clouds-background"></div>
+					<div class="c2 clouds-background"></div>
+					<div class="c3 clouds-background"></div>
+				</div>		
+			</div>
+			<div class="clouds front" style="left:402px;top:50px">
+				<div class="cloud-wrapper-front">
+					<div class="c1 clouds-background"></div>
+					<div class="c2 clouds-background"></div>
+					<div class="c3 clouds-background"></div>
+				</div>		
+			</div>
+			<div class="clouds front" style="left:1003px;top:161px">
+				<div class="cloud-wrapper-front">
+					<div class="c1 clouds-background"></div>
+					<div class="c2 clouds-background"></div>
+					<div class="c3 clouds-background"></div>
+				</div>		
+			</div>
 		</div>
-
-		<div class="clouds movecloud1">
-			<div class="cloud-wrapper">
-				<div class="c1"></div>
-				<div class="c2"></div>
-				<div class="c3"></div>
-			</div>		
+		<div class="play-game">
+			<button>Play</button>
 		</div>
-
-		<div class="clouds movecloud2">
-			<div class="cloud-wrapper">
-				<div class="c1"></div>
-				<div class="c2"></div>
-				<div class="c3"></div>
-			</div>		
-		</div>	
+		<audio autoplay>
+			<source src="all-along.mp3" type="audio/mpeg">
+		</audio>
 	</body>
 </html>
