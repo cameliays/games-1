@@ -14,28 +14,52 @@ movecloud.prototype.cloudmover = function(speed,classname){
 
 movecloud.prototype.moveit = function(ele,speed){
 	var inc = 0;
-	if(!isNaN(parseInt(ele.style.left))){
-		inc = parseInt(ele.style.left);
+	if(!isNaN(parseInt(ele.style.right))){
+		inc = parseInt(ele.style.right);
 	}	
-	console.log(ele.offsetWidth);
 	setInterval(function(){
 		
-		ele.style.left = inc+"px";
+		ele.style.right = inc+"px";
 		if(inc >= parseInt(windowWidth)){
-			
-			inc = (-1)*parseInt(ele.offsetWidth);
-			console.log(inc);	
+			inc = (-1)*parseInt(ele.offsetWidth);	
 		}
 		else{
-			inc++;
+			inc = inc+4;
 		}
 	},speed); 
 }
 
+
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = 0, len = this.length; i < len; i++) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+};
+
 window.onload = function(){
 	var mover = new movecloud(); 
-	mover.cloudmover(60,'rare');
-	mover.cloudmover(30,'middle');
-	mover.cloudmover(10,'front');				
+	mover.cloudmover(15,'rare');
+	mover.cloudmover(10,'middle');
+	mover.cloudmover(5,'front');
+	
+	var startgame = document.getElementById("startgame");
+	startgame.onclick = function(){
+		startgame.remove();
+		var appendhere = document.getElementById("appendhere");
+		var supportmusic = document.getElementById("supportmusic");
+		var playarea = document.createElement('div');
+		playarea.setAttribute("class","aeroplane");
+		playarea.setAttribute("id","aeroplane");
+		appendhere.appendChild(playarea);
+		supportmusic.setAttribute("src","files/flying.mp3");
+		inst = new shootchop(playarea);
+		inst.detectkey();
+	}				
 }
 
