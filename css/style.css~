@@ -1,4 +1,4 @@
-body{
+#shootchop{
 	background-image: -webkit-gradient(
 		linear,
 		left top,
@@ -11,7 +11,8 @@ body{
 	background-image: -webkit-linear-gradient(bottom, #2B8BD9 0%, #78ADD1 64%);
 	background-image: -ms-linear-gradient(bottom, #2B8BD9 0%, #78ADD1 64%);
 	background-image: linear-gradient(to bottom, #2B8BD9 0%, #78ADD1 64%);
-	overflow:hidden
+	overflow:hidden;
+	height:630px
 }
 .clouds-container{
 	height:320px;

@@ -43,6 +43,8 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
 };
 
 window.onload = function(){
+	createClouds();
+	controlHolder();
 	var mover = new movecloud(); 
 	mover.cloudmover(15,'rare');
 	mover.cloudmover(10,'middle');
@@ -57,9 +59,524 @@ window.onload = function(){
 		playarea.setAttribute("class","aeroplane");
 		playarea.setAttribute("id","aeroplane");
 		appendhere.appendChild(playarea);
-		supportmusic.setAttribute("src","files/flying.mp3");
+		//supportmusic.setAttribute("src","files/flying.mp3");
 		inst = new shootchop(playarea);
 		inst.detectkey();
 	}				
 }
 
+function createElement(type,attributes){
+	var element = document.createElement(type);
+	for(i in attributes){
+		element.setAttribute(i,attributes[i]);
+	}
+	return element;
+}
+
+function controlHolder(){
+	var attributes = new Array();
+	attributes['class'] = 'play-game';
+	attributes['style'] = 'z-index:999; position:relative';
+	attributes['id'] = 'appendhere'; 
+	var main = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['id'] = 'startgame'; 
+	var button = createElement('button',attributes);
+	var t = document.createTextNode('Play');
+	button.appendChild(t);
+	main.appendChild(button);
+	document.getElementById('shootchop').appendChild(main);
+}
+
+function createClouds(){
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds-container';
+	attributes['style'] = 'z-index:99; position:relative'; 
+	var main = createElement('div',attributes);
+
+	/* RARE CLOUDS */
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:550px;';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:711px;top:200px';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:1078px;top:120px';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:550px; top:500px';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:711px;top:400px';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds rare';
+	attributes['style'] = 'right:1078px;top:450px';
+	var rare = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-rare';
+	var rarewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background2';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background2';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background2';
+	var c3 = createElement('div',attributes);
+
+	rarewrap.appendChild(c1);
+	rarewrap.appendChild(c2);
+	rarewrap.appendChild(c3);
+	rare.appendChild(rarewrap);
+	main.appendChild(rare);
+
+	/* MIDDLE CLOUDS */
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds middle';
+	attributes['style'] = 'right:135px;top:55px';
+	var middle = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-middle';
+	var middlewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background1';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background1';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background1';
+	var c3 = createElement('div',attributes);
+
+	middlewrap.appendChild(c1);
+	middlewrap.appendChild(c2);
+	middlewrap.appendChild(c3);
+	middle.appendChild(middlewrap);
+	main.appendChild(middle);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds middle';
+	attributes['style'] = 'right:475px;top:119px';
+	var middle = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-middle';
+	var middlewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background1';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background1';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background1';
+	var c3 = createElement('div',attributes);
+
+	middlewrap.appendChild(c1);
+	middlewrap.appendChild(c2);
+	middlewrap.appendChild(c3);
+	middle.appendChild(middlewrap);
+	main.appendChild(middle);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds middle';
+	attributes['style'] = 'right:924px;top:20px';
+	var middle = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-middle';
+	var middlewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background1';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background1';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background1';
+	var c3 = createElement('div',attributes);
+
+	middlewrap.appendChild(c1);
+	middlewrap.appendChild(c2);
+	middlewrap.appendChild(c3);
+	middle.appendChild(middlewrap);
+	main.appendChild(middle);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds middle';
+	attributes['style'] = 'right:135px;top:400px';
+	var middle = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-middle';
+	var middlewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background1';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background1';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background1';
+	var c3 = createElement('div',attributes);
+
+	middlewrap.appendChild(c1);
+	middlewrap.appendChild(c2);
+	middlewrap.appendChild(c3);
+	middle.appendChild(middlewrap);
+	main.appendChild(middle);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds middle';
+	attributes['style'] = 'right:475px;top:450px';
+	var middle = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-middle';
+	var middlewrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background1';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background1';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background1';
+	var c3 = createElement('div',attributes);
+
+	middlewrap.appendChild(c1);
+	middlewrap.appendChild(c2);
+	middlewrap.appendChild(c3);
+	middle.appendChild(middlewrap);
+	main.appendChild(middle);
+
+
+	/* FRONT CLOUDS */
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:-64px;top:183px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:402px;top:50px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:1003px;top:161px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:-320px;top:320px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:200px;top:400px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+	var attributes = new Array();
+	attributes['class'] = 'clouds front';
+	attributes['style'] = 'right:903px;top:450px';
+	var front = createElement('div',attributes);
+	var attributes = new Array();
+	attributes['class'] = 'cloud-wrapper-front';
+	var frontwrap = createElement('div',attributes);	
+
+	var attributes = new Array();
+	attributes['class'] = 'c1 clouds-background';
+	var c1 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c2 clouds-background';
+	var c2 = createElement('div',attributes);
+
+	var attributes = new Array();
+	attributes['class'] = 'c3 clouds-background';
+	var c3 = createElement('div',attributes);
+
+	frontwrap.appendChild(c1);
+	frontwrap.appendChild(c2);
+	frontwrap.appendChild(c3);
+	front.appendChild(frontwrap);
+	main.appendChild(front);
+
+	document.getElementById('shootchop').appendChild(main);
+}
