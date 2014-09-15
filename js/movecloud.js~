@@ -1,4 +1,6 @@
 var windowWidth = window.innerWidth;
+var playarea;
+var appendhere;
 function movecloud(){
 	
 }
@@ -53,13 +55,14 @@ window.onload = function(){
 	var startgame = document.getElementById("startgame");
 	startgame.onclick = function(){
 		startgame.remove();
-		var appendhere = document.getElementById("appendhere");
-		var supportmusic = document.getElementById("supportmusic");
-		var playarea = document.createElement('div');
+		appendhere = document.getElementById("appendhere");
+		supportmusic = document.getElementById("supportmusic");
+		playarea = document.createElement('div');
 		playarea.setAttribute("class","aeroplane");
 		playarea.setAttribute("id","aeroplane");
 		appendhere.appendChild(playarea);
-		//supportmusic.setAttribute("src","files/flying.mp3");
+		supportmusic.setAttribute("src","files/flying.mp3");
+		supportmusic.volume = 0.2;
 		inst = new shootchop(playarea);
 		inst.detectkey();
 	}				
@@ -86,7 +89,16 @@ function controlHolder(){
 	var t = document.createTextNode('Play');
 	button.appendChild(t);
 	main.appendChild(button);
+	
+	var attributes = new Array();
+	attributes['autoplay'] = 'autoplay';
+	attributes['loop'] = 'loop';
+	attributes['src'] = 'files/all-along.mp3';
+	attributes['id'] = 'supportmusic'; 
+	var audio = createElement('audio',attributes);
+
 	document.getElementById('shootchop').appendChild(main);
+	document.getElementById('shootchop').appendChild(audio);
 }
 
 function createClouds(){

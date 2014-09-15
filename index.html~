@@ -9,9 +9,7 @@
 		<script type="application/javascript" src="js/shootchop.js"></script>
 	</head>
 	<body>
-		<div id="shootchop">
-
-		</div>
+		<div id="shootchop"></div>
 		<!--<div class="play-game" style="z-index:999;position:relative">
 			<div class="aeroplane" id="aeroplane"></div>
 		</div>
