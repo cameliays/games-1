@@ -60,11 +60,16 @@ window.onload = function(){
 		playarea = document.createElement('div');
 		playarea.setAttribute("class","aeroplane");
 		playarea.setAttribute("id","aeroplane");
+		playarea.setAttribute("style","bottom:0px;left:0px");
+		playarea.setAttribute("id","aeroplane");
 		appendhere.appendChild(playarea);
-		supportmusic.setAttribute("src","files/flying.mp3");
+		supportmusic.setAttribute("src","http://myradiofm.us/games/files/flying.mp3");
 		supportmusic.volume = 0.2;
 		inst = new shootchop(playarea);
 		inst.detectkey();
+		setInterval(function(){
+			inst.villians();
+		},3000);
 	}				
 }
 
@@ -93,12 +98,18 @@ function controlHolder(){
 	var attributes = new Array();
 	attributes['autoplay'] = 'autoplay';
 	attributes['loop'] = 'loop';
-	attributes['src'] = 'files/all-along.mp3';
+	attributes['src'] = 'http://myradiofm.us/games/files/all-along.mp3';
 	attributes['id'] = 'supportmusic'; 
 	var audio = createElement('audio',attributes);
 
+	var attributes = new Array();
+	attributes['src'] = 'http://myradiofm.us/games/files/explosion.mp3';
+	attributes['id'] = 'explosion'; 
+	var audio1 = createElement('audio',attributes);
+
 	document.getElementById('shootchop').appendChild(main);
 	document.getElementById('shootchop').appendChild(audio);
+	document.getElementById('shootchop').appendChild(audio1);
 }
 
 function createClouds(){

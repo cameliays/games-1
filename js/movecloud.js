@@ -67,6 +67,9 @@ window.onload = function(){
 		supportmusic.volume = 0.2;
 		inst = new shootchop(playarea);
 		inst.detectkey();
+		setInterval(function(){
+			inst.villians();
+		},3000);
 	}				
 }
 
@@ -99,8 +102,14 @@ function controlHolder(){
 	attributes['id'] = 'supportmusic'; 
 	var audio = createElement('audio',attributes);
 
+	var attributes = new Array();
+	attributes['src'] = 'files/explosion.mp3';
+	attributes['id'] = 'explosion'; 
+	var audio1 = createElement('audio',attributes);
+
 	document.getElementById('shootchop').appendChild(main);
 	document.getElementById('shootchop').appendChild(audio);
+	document.getElementById('shootchop').appendChild(audio1);
 }
 
 function createClouds(){
